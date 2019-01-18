@@ -7,7 +7,7 @@ const handshakeMap = {
 
 export const secretHandshake = (number) => {
   if (!parseInt(number, 10)) {
-    return 'Handshake must be a number';
+    throw new Error('Handshake must be a number');
   }
   let numberInBinary = parseInt(parseInt(number, 10).toString(2), 10);
   let isToBeReversed = false;

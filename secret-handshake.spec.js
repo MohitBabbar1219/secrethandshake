@@ -19,4 +19,8 @@ describe('Secret Handshake', () => {
   test('binary 10011 (decimal 19) is double blink and wink', () => {
     expect(secretHandshake(19)).toEqual(['double blink', 'wink']);
   });
+  test('text is an invalid secret handshake', () => {
+    expect(() => secretHandshake('piggies'))
+      .toThrow(new Error('Handshake must be a number'));
+  });
 });
