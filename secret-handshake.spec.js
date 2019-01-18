@@ -7,4 +7,7 @@ describe('Secret Handshake', () => {
   test('binary 10 (decimal 2) is a double blink', () => {
     expect(secretHandshake(2)).toEqual(['double blink']);
   });
+  test('binary 100 (decimal 4) is close your eyes', () => {
+    expect(secretHandshake(4)).toEqual(['close your eyes']);
+  });
 });
